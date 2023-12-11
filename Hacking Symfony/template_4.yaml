@@ -1,0 +1,21 @@
+id: symfony-profiler-disclosure
+
+info:
+  name: Symfony Profiler Disclosure
+  author: pdteam
+  severity: low
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_profiler/"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "Symfony Profiler"
+        part: body
+      - type: status
+        status:
+          - 200
