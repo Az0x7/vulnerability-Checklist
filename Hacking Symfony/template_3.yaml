@@ -1,0 +1,19 @@
+id: symfony-debug-mode
+info:
+  name: Symfony Debug Mode
+  author: pdteam
+  severity: high
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_profiler/open"
+      - "{{BaseURL}}/index_dev.php"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - "Symfony Profiler"
+          - "Token not found"
+        part: body
