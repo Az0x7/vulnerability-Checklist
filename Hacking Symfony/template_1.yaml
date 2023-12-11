@@ -1,0 +1,42 @@
+id: spring-eureka
+
+info:
+  name: profiler disclosure
+  author: Az0x7
+  severity: high
+  metadata:
+    max-request: 1
+    verified: true
+    shodan-query: title:"Eureka"
+  tags: exposure
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_profiler"
+      - "{{BaseURL}}/api/_profiler"
+      - "{{BaseURL}}/admin/_profiler"
+      - "{{BaseURL}}/admin/api/_profiler"
+      - "{{BaseURL}}/app_dev.php/_profiler"
+      - "{{BaseURL}}/api/app_dev.php/_profiler"
+      - "{{BaseURL}}/_profiler/phpinfo"
+      - "{{BaseURL}}/api/_profiler/phpinfo"
+      - "{{BaseURL}}/admin/_profiler/phpinfo"
+      - "{{BaseURL}}/admin/api/_profiler/phpinfo"
+      - "{{BaseURL}}/app_dev.php/_profiler/phpinfo"
+      - "{{BaseURL}}/api/app_dev.php/_profiler/phpinfo"
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - 'symphony'
+          - 'symphony profiler'
+          - 'SYMPHONY_DOTENV_VARS'
+          - 'APP_SECRET'
+          - 'APP_ENV'
+        condition: and
+
+      - type: status
+        status:
+          - 200
