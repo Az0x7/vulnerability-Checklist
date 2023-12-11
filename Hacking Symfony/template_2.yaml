@@ -1,0 +1,35 @@
+id: spring-eureka
+
+info:
+  name: profiler disclosure
+  author: tess
+  severity: high
+  metadata:
+    max-request: 1
+    verified: true
+    shodan-query: title:"Eureka"
+  tags: exposure
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/_profiler/empty/search/results?limit=10"
+      - "{{BaseURL}}/api/_profiler/empty/search/results?limit=10"
+      - "{{BaseURL}}/admin/_profiler/empty/search/results?limit=10"
+      - "{{BaseURL}}/admin/api/_profiler/empty/search/results?limit=10"
+      - "{{BaseURL}}/app_dev.php/_profiler/open?file=app/config/parameters.yml"
+      - "{{BaseURL}}/app_dev.php/_profiler/phpinfo"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - 'symphony'
+          - 'profiler'
+          - 'profile search'
+        condition: and
+
+      - type: status
+        status:
+          - 200
